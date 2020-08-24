@@ -1,12 +1,16 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import Header from "./components/header";
+import { Route, Switch } from "react-router-dom";
+
+import Home from "./Home";
+import "./styles/global.css";
+import "./styles/tailwind.css";
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Switch>
+        <Route exact path="/" component={Home} />
+      </Switch>
     </div>
   );
 }
