@@ -1,5 +1,4 @@
 {
-  "homepage": "https://develop.dldoq5hxs3lte.amplifyapp.com/",
   "name": "setup-shop-fe",
   "version": "0.1.0",
   "private": true,
@@ -16,8 +15,6 @@
     "tailwindcss": "^1.7.3"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "concurrently \"npm run watch:css\" \"react-scripts start\"",
     "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
