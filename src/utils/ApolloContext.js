@@ -1,6 +1,7 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
 
 const uri = () => {
+  console.log(window.location.hostname);
   if (window.location.hostname === "localhost") {
     console.log(window.location.hostname);
     return "http://localhost:8888/Setup_Shop/setup-shop-be/graphql";
