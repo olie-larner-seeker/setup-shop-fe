@@ -28,6 +28,14 @@ p {
   font-family: basic-sans, sans-serif;
 }
 
+.hero-headline em {
+  @apply text-brandteal;
+}
+
+.features-headline span {
+  @apply text-brandteal;
+}
+
 .basic-sans-thin {
   font-family: basic-sans, sans-serif;
   @apply font-hairline;

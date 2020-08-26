@@ -607,6 +607,18 @@ p {
   font-family: basic-sans, sans-serif;
 }
 
+.hero-headline em {
+  --text-opacity: 1;
+  color: #10D5FF;
+  color: rgba(16, 213, 255, var(--text-opacity));
+}
+
+.features-headline span {
+  --text-opacity: 1;
+  color: #10D5FF;
+  color: rgba(16, 213, 255, var(--text-opacity));
+}
+
 .basic-sans-thin {
   font-family: basic-sans, sans-serif;
   font-weight: 100;

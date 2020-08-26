@@ -5,7 +5,7 @@ const Cta = (cta) => {
   return (
     <div
       style={{ minWidth: "189px" }}
-      className={`${ctastyle.bgcolor} ${ctastyle.border} ${ctastyle.textColor} px-4 py-1 mx-3`}
+      className={`${ctastyle.bgcolor} ${ctastyle.border} ${ctastyle.textColor} ${cta.extraStyle} px-4 py-1`}
     >
       <a href={cta.ctaLink} className="font-bold">
         {cta.ctaCopy}
