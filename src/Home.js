@@ -30,9 +30,7 @@ const Home = () => {
   }
 
   return (
-    <div className="relative w-full pt-16 bg-fixed main-gradient">
-      {mapBlocksToComponents(data.pageBy)}
-    </div>
+    <div className="relative w-full">{mapBlocksToComponents(data.pageBy)}</div>
   );
 };
 
