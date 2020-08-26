@@ -607,6 +607,10 @@ p {
   font-family: basic-sans, sans-serif;
 }
 
+a {
+  font-family: basic-sans, sans-serif;
+}
+
 .hero-headline em {
   --text-opacity: 1;
   color: #10D5FF;
@@ -10403,6 +10407,10 @@ p {
 
 .h-screen {
   height: 100vh;
+}
+
+.h-halfscreen {
+  height: 50vh;
 }
 
 .text-xs {
@@ -28657,6 +28665,10 @@ p {
     height: 100vh;
   }
 
+  .sm\:h-halfscreen {
+    height: 50vh;
+  }
+
   .sm\:text-xs {
     font-size: 0.75rem;
   }
@@ -46877,6 +46889,10 @@ p {
 
   .md\:h-screen {
     height: 100vh;
+  }
+
+  .md\:h-halfscreen {
+    height: 50vh;
   }
 
   .md\:text-xs {
@@ -65101,6 +65117,10 @@ p {
     height: 100vh;
   }
 
+  .lg\:h-halfscreen {
+    height: 50vh;
+  }
+
   .lg\:text-xs {
     font-size: 0.75rem;
   }
@@ -83321,6 +83341,10 @@ p {
 
   .xl\:h-screen {
     height: 100vh;
+  }
+
+  .xl\:h-halfscreen {
+    height: 50vh;
   }
 
   .xl\:text-xs {

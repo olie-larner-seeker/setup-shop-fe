@@ -28,6 +28,10 @@ p {
   font-family: basic-sans, sans-serif;
 }
 
+a {
+  font-family: basic-sans, sans-serif;
+}
+
 .hero-headline em {
   @apply text-brandteal;
 }

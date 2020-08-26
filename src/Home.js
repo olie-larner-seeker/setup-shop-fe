@@ -3,7 +3,6 @@ import { gql, useQuery } from "@apollo/client";
 
 import getBlockDefinitions from "./utils/BlockQueries";
 import mapBlocksToComponents from "./utils/BlockMapper";
-
 const Home = () => {
   const GET_BLOCKS = gql`
     query MyQuery {
