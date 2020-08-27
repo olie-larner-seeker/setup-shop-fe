@@ -70,6 +70,7 @@ const Header = () => {
             isOpen={isOpen}
             menuClicked={() => {
               setIsOpen(!isOpen);
+              return null;
             }}
             color="white"
             width={20}
