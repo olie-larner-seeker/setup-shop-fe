@@ -24,6 +24,14 @@ const Header = () => {
           }
         }
       }
+      siteSettings {
+        siteSettings {
+          siteLogo {
+            altText
+            sourceUrl(size: LARGE)
+          }
+        }
+      }
     }
   `;
 
@@ -41,9 +49,11 @@ const Header = () => {
     return <>Ooops...</>;
   }
 
+  const { siteSettings } = data.siteSettings;
+
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-screen-xl text-white">
-      <ul className="flex justify-around w-11/12 mx-auto">
+    <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-screen-xl py-4 text-white">
+      <ul className="flex items-center justify-around w-11/12 mx-auto">
         {data.menuItems.edges.map((item, key) => {
           let url;
           if (item.node.connectedNode.node.__typename === "Post") {
@@ -52,7 +62,18 @@ const Header = () => {
           if (item.node.connectedNode.node.__typename === "Page") {
             url = `/${item.node.connectedNode.node.slug}`;
           }
-          console.log(url);
+          if (item.node.connectedNode.node.slug === "home") {
+            return (
+              <li key={key}>
+                <a href={url}>
+                  <img
+                    src={siteSettings.siteLogo.sourceUrl}
+                    alt={siteSettings.siteLogo.altText}
+                  />
+                </a>
+              </li>
+            );
+          }
           return (
             <li key={key}>
               <a href={url}>{item.node.label}</a>
