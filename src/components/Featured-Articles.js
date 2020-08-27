@@ -6,14 +6,14 @@ import useWindowSize from "../utils/useWindowSize";
 const FeaturedArticles = (data) => {
   const { featuredArticles } = data.featuredArticles;
 
-  const screenWidth = useWindowSize();
+  // const screenWidth = useWindowSize();
 
-  const numberOfSlide = () => {
-    if (screenWidth.width <= 640) {
-      return 1;
-    }
-    return 3;
-  };
+  // const numberOfSlide = () => {
+  //   if (screenWidth.width <= 640) {
+  //     return 1;
+  //   }
+  //   return 3;
+  // };
 
   return (
     // <div className="grid w-full grid-cols-3">
@@ -21,7 +21,7 @@ const FeaturedArticles = (data) => {
       naturalSlideWidth={100}
       naturalSlideHeight={100}
       totalSlides={featuredArticles.length}
-      visibleSlides={numberOfSlide()}
+      visibleSlides={3}
     >
       <Slider className="overflow-hidden slider-height">
         {featuredArticles.map((article, key) => {
