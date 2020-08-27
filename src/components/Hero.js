@@ -28,15 +28,21 @@ const Hero = (data) => {
     >
       <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-25"></div>
       <div className="container z-10 flex flex-col justify-center mx-auto">
-        <div className="w-full max-w-screen-md pt-48 mx-auto text-center text-white ">
+        <div className="w-full max-w-screen-md pt-32 mx-auto text-center text-white sm:pt-48 ">
           <h1
             dangerouslySetInnerHTML={{ __html: headline }}
             className="mb-3 leading-tight hero-headline"
           />
-          <p className="text-xl hero-subheading">{subheading}</p>
-          <div className="flex flex-row justify-center pt-8">
+          <p className="w-11/12 mx-auto text-xl hero-subheading">
+            {subheading}
+          </p>
+          <div className="flex flex-col justify-center pt-8 sm:flex-row">
             {cta.map((item, key) => {
-              return <div key={key}>{renderCta(item, key)}</div>;
+              return (
+                <div className="inline-block mb-4 sm:mb-0" key={key}>
+                  {renderCta(item, key)}
+                </div>
+              );
             })}
           </div>
         </div>

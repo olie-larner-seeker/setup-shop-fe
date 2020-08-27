@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^7.1.2",
     "graphql": "^15.3.0",
     "postcss": "^7.0.32",
+    "pure-react-carousel": "^1.27.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",

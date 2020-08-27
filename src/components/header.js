@@ -52,7 +52,7 @@ const Header = () => {
   const { siteSettings } = data.siteSettings;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-screen-xl py-4 text-white">
+    <div className="fixed top-0 left-0 right-0 z-50 hidden w-full max-w-screen-xl py-6 text-white sm:block">
       <ul className="flex items-center justify-around w-11/12 mx-auto">
         {data.menuItems.edges.map((item, key) => {
           let url;
