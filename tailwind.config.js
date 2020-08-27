@@ -301,6 +301,7 @@ module.exports = {
       auto: "auto",
       "1/2": "50%",
       "1/3": "30%",
+      full: "100%",
     },
     letterSpacing: {
       tighter: "-0.05em",
@@ -616,6 +617,7 @@ module.exports = {
       opacity: "opacity",
       shadow: "box-shadow",
       transform: "transform",
+      left: "left",
     },
     transitionTimingFunction: {
       linear: "linear",

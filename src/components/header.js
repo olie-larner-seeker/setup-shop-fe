@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery, gql } from "@apollo/client";
+import Hamburger from "react-hamburger-menu";
+import classnames from "classnames";
 
 const Header = () => {
   const GET_LINKS = gql`
@@ -36,6 +38,7 @@ const Header = () => {
   `;
 
   const { loading, error, data } = useQuery(GET_LINKS);
+  const [isOpen, setIsOpen] = useState(false);
 
   if (loading) {
     return (
@@ -52,8 +55,36 @@ const Header = () => {
   const { siteSettings } = data.siteSettings;
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 hidden w-full max-w-screen-xl py-6 text-white sm:block">
-      <ul className="flex items-center justify-around w-11/12 mx-auto">
+    <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-screen-xl py-6 overflow-hidden text-white">
+      <div className="relative z-50 flex justify-between w-11/12 mx-auto lg:hidden">
+        <div className="">
+          <a href="/">
+            <img
+              src={siteSettings.siteLogo.sourceUrl}
+              alt={siteSettings.siteLogo.altText}
+            />
+          </a>
+        </div>
+        <div className="">
+          <Hamburger
+            isOpen={isOpen}
+            menuClicked={() => {
+              setIsOpen(!isOpen);
+            }}
+            color="white"
+            width={20}
+            height={15}
+            strokeWidth={2}
+          />
+        </div>
+      </div>
+      <ul
+        className={classnames(
+          "fixed top-0 z-10 flex flex-col items-center justify-center w-screen sm:w-1/2 transition duration-500 ease-in-out  h-screen mx-auto lg:justify-around lg:flex-row bg-brandteal lg:bg-transparent lg:h-auto lg:w-11/12 lg:relative",
+          { "left-full lg:left-0": !isOpen, "left-0 sm:left-1/2": isOpen }
+        )}
+        style={{ transitionProperty: "left" }}
+      >
         {data.menuItems.edges.map((item, key) => {
           let url;
           if (item.node.connectedNode.node.__typename === "Post") {
@@ -64,8 +95,8 @@ const Header = () => {
           }
           if (item.node.connectedNode.node.slug === "home") {
             return (
-              <li key={key}>
-                <a href={url}>
+              <li className="hidden lg:block" key={key}>
+                <a href="/">
                   <img
                     src={siteSettings.siteLogo.sourceUrl}
                     alt={siteSettings.siteLogo.altText}
