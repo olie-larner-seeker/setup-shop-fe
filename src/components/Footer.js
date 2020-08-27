@@ -32,8 +32,6 @@ const Footer = () => {
 
   const { siteSettings } = data.siteSettings;
 
-  console.log(siteSettings.logo.sourceUrl);
-
   return (
     <div className="flex flex-col items-center justify-center w-full py-24 text-white bg-black basic-sans">
       <img src={siteSettings.logo.sourceUrl} alt={siteSettings.logo.altText} />
