@@ -20,7 +20,7 @@ const FeaturedArticles = (data) => {
       naturalSlideWidth={100}
       naturalSlideHeight={100}
       totalSlides={featuredArticles.length}
-      visibleSlides={numberOfSlide}
+      visibleSlides={numberOfSlide()}
     >
       <Slider className="overflow-hidden slider-height">
         {featuredArticles.map((article, key) => {
