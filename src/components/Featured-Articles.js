@@ -27,7 +27,7 @@ const FeaturedArticles = (data) => {
           return (
             <Slide
               key={key}
-              className="w-full p-12 text-white bg-center bg-cover sm:w-1/3 h-halfscreen"
+              className="w-full text-white bg-center bg-cover sm:w-1/3 h-halfscreen"
               style={{
                 backgroundImage: `url(${article.featuredImage.node.sourceUrl})`,
               }}
