@@ -83,12 +83,12 @@ const Header = () => {
       </div>
       <div
         className={classnames(
-          "fixed top-0 left-0 right-0 z-40 w-screen max-w-screen-xl sm:w-1/2 transition duration-500 ease-in-out h-screen py-6 flex lg:block bg-brandteal lg:bg-transparent lg:h-auto lg:w-11/12",
+          "fixed top-0 left-0 right-0 z-40 w-screen sm:w-1/2 transition duration-500 ease-in-out h-screen py-6 flex lg:block bg-brandteal lg:bg-transparent lg:h-auto lg:w-full",
           { "left-full lg:left-0": !isOpen, "left-0 sm:left-1/2": isOpen }
         )}
         style={{ transitionProperty: "left" }}
       >
-        <ul className="flex flex-col items-center justify-center mx-auto text-white lg:justify-around lg:flex-row lg:relative">
+        <ul className="flex flex-col items-center justify-center w-11/12 max-w-screen-xl mx-auto text-white lg:justify-around lg:flex-row lg:relative">
           {data.menuItems.edges.map((item, key) => {
             let url;
             if (item.node.connectedNode.node.__typename === "Post") {
