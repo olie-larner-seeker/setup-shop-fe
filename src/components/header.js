@@ -56,7 +56,7 @@ const Header = () => {
 
   return (
     <>
-      <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-screen-xl py-6 overflow-x-hidden text-white">
+      <div className="fixed top-0 left-0 z-50 w-full max-w-screen-xl py-6 overflow-x-hidden text-white lg:w-auto">
         <div className="relative z-50 flex justify-between w-11/12 mx-auto lg:hidden">
           <div className="">
             <a href="/">
